@@ -14,10 +14,6 @@ db.sequelize.sync()
  console.log("Failed to sync db: " + err.message);
  });
 
- db.sequelize.sync({ force: true }).then(() => {
-    console.log("Drop and re-sync db.");
-   });
-
 app.use(morgan('dev'))
 app.use(express.json());
 app.use(apiRouter);
